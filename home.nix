@@ -9,11 +9,20 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    nerd-fonts.commit-mono
-    firefox
+    brightnessctl
+    cliphist
     eza
-    zoxide
+    firefox
+    hyprpaper
+    hyprpicker
+    hyprshot
     lazygit
+    nerd-fonts.commit-mono
+    pamixer
+    pavucontrol
+    playerctl
+    wl-clipboard
+    zoxide
   ];
 
   imports = [
