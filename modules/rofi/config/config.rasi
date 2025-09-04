@@ -1,0 +1,5 @@
+@theme "./theme.rasi"
+
+configuration {
+    font: "CommitMono Nerd Font Mono 14";
+}
