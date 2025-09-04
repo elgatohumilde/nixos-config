@@ -8,18 +8,21 @@
   ];
 
   home.sessionVariables = {
+    HYPRCURSOR_THEME = "24";
     HYPRCURSOR_SIZE = "24";
     HYPRSHOT_DIR = "${config.home.homeDirectory}";
     LIBVA_DRIVER_NAME = "nvidia";
     NVD_BACKEND = "direct";
-    XCURSOR_SIZE = "24";
     XDG_CURRENT_DESKTOP = "Hyprland";
     XDG_SESSION_DESKTOP = "Hyprland";
+    WLR_NO_HARDWARE_DESKTOP = "1";
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = null;
+
     xwayland.enable = true;
 
     settings = {

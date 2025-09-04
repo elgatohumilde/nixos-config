@@ -6,9 +6,9 @@
       F_terminal = "foot -a F_window";
       TMUX_F_terminal = "${F_terminal} tmux new-session -A -s main";
       TMUX_terminal = "${terminal} tmux new-session -A -s main";
-      browser = "zen-browser";
+      browser = "firefox";
       cliphist = ''cliphist list | rofi -dmenu -sync -p "Clipboard" | cliphist decode | wl-copy'';
-      dotfiles = "${terminal} -e lazygit --git-dir ~/.local/share/yadm/repo.git/";
+      dotfiles = "${F_terminal} -D ~/.dotfiles -e lazygit --git-dir ~/.dotfiles/.git";
       fileManager = "${F_terminal} -e nvim .";
       menu = ''rofi -show-icons -display-drun "Select" -show drun'';
       terminal = "foot";
