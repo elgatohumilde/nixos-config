@@ -60,7 +60,7 @@
     "format-ethernet": "  Wired",
     "format-linked": "󱘖 {ifname} (No IP)",
     "format-disconnected": "  Disconnected",
-    "on-click": "$TERMINAL -a F_window -e sh -c 'sleep 0.1; exec nmtui'",
+    "on-click": "foot -a F_window -e sh -c 'sleep 0.1; exec nmtui'",
     "tooltip-format": "<span color='#F38BA8'>󰅧</span>   {bandwidthUpBytes}   <span color='#89B4FA'>󰅢</span>   {bandwidthDownBytes}",
     "interval": 1,
   },
