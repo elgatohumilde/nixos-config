@@ -2,13 +2,15 @@
 {
   programs.tmux = {
     enable = true;
-    terminal = "tmux-256color";
+
+    prefix = "M-x";
     baseIndex = 1;
+    escapeTime = 0;
     mouse = true;
+    terminal = "tmux-256color";
 
     extraConfig = ''
       ### opts
-      set -g prefix M-x
       set -g renumber-windows on
 
       setw -g mode-keys vi
