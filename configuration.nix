@@ -41,8 +41,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    vim
     git
+    vim
+    wget
   ];
 
   system.stateVersion = "25.05";
