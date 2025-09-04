@@ -15,6 +15,8 @@
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
+  programs.hyprland.enable = true;
+
   time.timeZone = "America/Lima";
 
   i18n.defaultLocale = "en_US.UTF-8";
