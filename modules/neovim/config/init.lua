@@ -114,6 +114,7 @@ map({ "n", "v" }, "gL", "g$")
 map({ "n", "v" }, "gh", "^")
 map({ "n", "v" }, "gl", "$")
 
+require("gitsigns").setup()
 require("mini.ai").setup()
 require("mini.pairs").setup()
 require("mini.surround").setup()
