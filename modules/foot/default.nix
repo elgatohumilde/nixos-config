@@ -1,11 +1,15 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.foot = {
     enable = true;
     server.enable = false;
 
     settings = {
-      main.font = "CommitMono Nerd Font Mono:size=16";
+
+      main = {
+        shell = "${pkgs.fish}/bin/fish";
+        font = "CommitMono Nerd Font Mono:size=16";
+      };
 
       colors = {
         foreground = "e4e4e4";
