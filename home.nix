@@ -5,6 +5,7 @@
   home.stateVersion = "24.11";
 
   programs.home-manager.enable = true;
+  programs.lazydocker.enable = true;
 
   fonts.fontconfig.enable = true;
 
@@ -13,6 +14,7 @@
     cliphist
     eza
     firefox
+    gcc
     hyprpaper
     hyprpicker
     hyprshot
@@ -21,6 +23,7 @@
     pamixer
     pavucontrol
     playerctl
+    unzip
     wl-clipboard
     zoxide
   ];
