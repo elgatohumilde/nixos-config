@@ -4,7 +4,6 @@
   modulesPath,
   ...
 }:
-
 {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
@@ -22,12 +21,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/059658b0-13f7-4053-a5c1-631038cb2036";
+    device = "/dev/disk/by-label/nixos";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/C801-253B";
+    device = "/dev/disk/by-label/boot";
     fsType = "vfat";
     options = [
       "fmask=0077"
@@ -36,7 +35,7 @@
   };
 
   swapDevices = [
-    { device = "/dev/disk/by-uuid/0d0cf434-79ca-4402-9bdd-4b6cd40b35ee"; }
+    { device = "/dev/disk/by-label/swap"; }
   ];
 
   networking.useDHCP = lib.mkDefault true;
