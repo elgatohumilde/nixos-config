@@ -1,17 +1,8 @@
+{ lib, ... }:
+let
+  subdirs = builtins.attrNames (builtins.readDir ./.);
+  moduleDirs = lib.filter (name: (builtins.readDir ./.).${name} == "directory") subdirs;
+in
 {
-
-  imports = [
-    ./direnv
-    ./fish
-    ./foot
-    ./git
-    ./hypr
-    ./mako
-    ./neovim
-    ./rofi
-    ./tmux
-    ./waybar
-    ./zathura
-  ];
-
+  imports = map (dir: ./${dir}) moduleDirs;
 }
