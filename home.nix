@@ -6,14 +6,15 @@
 
   programs.home-manager.enable = true;
   programs.lazydocker.enable = true;
+  programs.librewolf.enable = true;
 
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
     brightnessctl
     cliphist
+    equibop
     eza
-    firefox
     gcc
     hyprpaper
     hyprpicker
