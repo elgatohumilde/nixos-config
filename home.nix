@@ -43,6 +43,26 @@
     };
   };
 
+  home.file = {
+    ".local/bin/powermenu" = {
+      executable = true;
+      text = ''
+         #!/bin/sh
+
+        CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | rofi -dmenu -sync -i -p "Choose")
+
+        case "$CHOSEN" in
+            "Lock"    ) hyprctl dispatch exec hyprlock ;;
+            "Suspend" ) systemctl suspend-then-hibernate ;;
+            "Reboot"  ) reboot ;;
+            "Shutdown") poweroff ;;
+            "Log Out" ) hyprctl dispatch exit ;;
+            *) exit 1 ;;
+        esac
+      '';
+    };
+  };
+
   home.packages = with pkgs; [
     brightnessctl
     catppuccin-cursors.macchiatoTeal

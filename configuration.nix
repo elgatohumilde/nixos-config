@@ -43,6 +43,7 @@
     ];
   };
 
+  environment.localBinInPath = true;
   environment.systemPackages = with pkgs; [
     git
     vim
