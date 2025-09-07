@@ -10,12 +10,47 @@
 
   fonts.fontconfig.enable = true;
 
+  home.sessionVariables = {
+    XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
+    XCURSOR_SIZE = "30";
+    HYPRCURSOR_THEME = "Catppuccin-Macchiato-Teal";
+    HYPRCURSOR_SIZE = "30";
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "gtk";
+  };
+
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Kanagawa-BL";
+      package = pkgs.kanagawa-gtk-theme;
+    };
+    cursorTheme = {
+      name = "Catppuccin-Macchiato-Teal";
+      package = pkgs.catppuccin-cursors.macchiatoTeal;
+    };
+
+    gtk4.extraCss = config.gtk.gtk3.extraCss;
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      font-name = "CommitMono Nerd Font Propo 12";
+      color-scheme = "prefer-dark";
+    };
+  };
+
   home.packages = with pkgs; [
     brightnessctl
+    catppuccin-cursors.macchiatoTeal
     cliphist
     equibop
     eza
     gcc
+    hyprcursor
     hyprpaper
     hyprpicker
     hyprshot
