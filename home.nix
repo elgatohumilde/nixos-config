@@ -11,9 +11,9 @@
   fonts.fontconfig.enable = true;
 
   home.sessionVariables = {
-    XCURSOR_THEME = "Catppuccin-Macchiato-Teal";
+    XCURSOR_THEME = "Catppuccin-Macchiato-Dark";
     XCURSOR_SIZE = "30";
-    HYPRCURSOR_THEME = "Catppuccin-Macchiato-Teal";
+    HYPRCURSOR_THEME = "Catppuccin-Macchiato-Dark";
     HYPRCURSOR_SIZE = "30";
   };
 
@@ -29,8 +29,8 @@
       package = pkgs.tokyonight-gtk-theme;
     };
     cursorTheme = {
-      name = "Catppuccin-Macchiato-Teal";
-      package = pkgs.catppuccin-cursors.macchiatoTeal;
+      name = "Catppuccin-Macchiato-Dark";
+      package = pkgs.catppuccin-cursors.macchiatoDark;
     };
 
     gtk4.extraCss = config.gtk.gtk3.extraCss;
@@ -65,7 +65,7 @@
 
   home.packages = with pkgs; [
     brightnessctl
-    catppuccin-cursors.macchiatoTeal
+    catppuccin-cursors.macchiatoDark
     cliphist
     equibop
     eza
