@@ -10,11 +10,14 @@
 
   fonts.fontconfig.enable = true;
 
+  home.pointerCursor = {
+    name = "Bibata-Modern-Classic";
+    package = pkgs.bibata-cursors;
+  };
+
   home.sessionVariables = {
-    XCURSOR_THEME = "Catppuccin-Macchiato-Dark";
+    XCURSOR_THEME = "Bibata-Modern-Classic";
     XCURSOR_SIZE = "30";
-    HYPRCURSOR_THEME = "Catppuccin-Macchiato-Dark";
-    HYPRCURSOR_SIZE = "30";
   };
 
   qt = {
@@ -29,8 +32,8 @@
       package = pkgs.tokyonight-gtk-theme;
     };
     cursorTheme = {
-      name = "Catppuccin-Macchiato-Dark";
-      package = pkgs.catppuccin-cursors.macchiatoDark;
+      name = "Bibata-Modern-Classic";
+      package = pkgs.bibata-cursors;
     };
 
     gtk4.extraCss = config.gtk.gtk3.extraCss;
@@ -64,13 +67,12 @@
   };
 
   home.packages = with pkgs; [
+    bibata-cursors
     brightnessctl
-    catppuccin-cursors.macchiatoDark
     cliphist
     equibop
     eza
     gcc
-    hyprcursor
     hyprpaper
     hyprpicker
     hyprshot
