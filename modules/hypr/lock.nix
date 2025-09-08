@@ -35,15 +35,15 @@
     };
 
     extraConfig = ''
-        label {
-          color = rgb(cba6f7)
-            font_family = CommitMono Nerd Font
-            font_size = 64
-            halign = center
-            position = 0, 60
-            text = cmd[update:1000] echo $(date +"%H:%M:%S")
-            valign = center
-        }
+      label {
+        color = rgb(cba6f7)
+          font_family = CommitMono Nerd Font
+          font_size = 64
+          halign = center
+          position = 0, 60
+          text = cmd[update:1000] echo $(date +"%H:%M:%S")
+          valign = center
+      }
 
       label {
         color = rgb(cdd6f4)
