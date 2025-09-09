@@ -79,6 +79,7 @@
     hyprshot
     lazygit
     nerd-fonts.commit-mono
+    osu-lazer-bin
     pamixer
     pavucontrol
     playerctl
