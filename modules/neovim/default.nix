@@ -34,7 +34,6 @@
 
     extraPackages = with pkgs; [
       fd
-      lombok
       ripgrep
       wl-clipboard
 
@@ -48,6 +47,7 @@
       jdt-language-server
       lua-language-server
       nil
+      pyright
       tinymist
       verible
     ];
