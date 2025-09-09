@@ -38,6 +38,7 @@
 
     gtk4.extraCss = config.gtk.gtk3.extraCss;
   };
+  xdg.portal.config.common.default = "*";
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
