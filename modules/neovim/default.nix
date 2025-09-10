@@ -47,7 +47,6 @@
       jdt-language-server
       lua-language-server
       nil
-      pyright
       tinymist
       verible
     ];
