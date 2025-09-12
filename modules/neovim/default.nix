@@ -44,6 +44,7 @@
 
       bash-language-server
       clang-tools
+      gopls
       jdt-language-server
       lua-language-server
       nil
