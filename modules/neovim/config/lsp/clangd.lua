@@ -46,8 +46,6 @@ local function symbol_info(bufnr, client)
 end
 
 ---@class ClangdInitializeResult: lsp.InitializeResult
----@field offsetEncoding? string
-
 return {
 	cmd = { "clangd" },
 	filetypes = { "c", "cpp", "objc", "objcpp", "cuda" },
