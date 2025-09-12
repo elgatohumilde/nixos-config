@@ -83,6 +83,7 @@
     pamixer
     pavucontrol
     playerctl
+    postman
     unzip
     wl-clipboard
     zoxide
