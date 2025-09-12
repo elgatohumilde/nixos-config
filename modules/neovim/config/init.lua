@@ -72,7 +72,7 @@ require("nvim-treesitter.configs").setup({
 })
 
 vim.diagnostic.config({ virtual_text = true })
-vim.lsp.enable({ "clangd", "lua_ls", "tinymist", "verible", "bashls", "nil_ls" })
+vim.lsp.enable({ "clangd", "lua_ls", "tinymist", "verible", "bashls", "nil_ls", "gopls" })
 
 require("blink-cmp").setup({
 	signature = { enabled = true },
