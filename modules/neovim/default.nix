@@ -16,7 +16,7 @@
       gitsigns-nvim
       nvim-jdtls
 
-      gruber-darker-nvim
+      jellybeans-nvim
 
       mini-ai
       mini-icons

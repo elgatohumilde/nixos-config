@@ -33,7 +33,7 @@ vim.o.wrap = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-vim.cmd.colorscheme("gruber-darker")
+vim.cmd.colorscheme("jellybeans-nvim")
 require("mini.icons").setup()
 
 require("mini.notify").setup()
