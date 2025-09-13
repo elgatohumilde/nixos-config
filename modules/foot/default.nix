@@ -13,12 +13,12 @@
 
       colors = {
         foreground = "e4e4e4";
-        background = "181818";
+        background = "141414";
 
         selection-foreground = "f4f4ff";
         selection-background = "453d41";
 
-        regular0 = "181818";
+        regular0 = "07080d";
         regular1 = "f43841";
         regular2 = "73d936";
         regular3 = "ffdd33";
