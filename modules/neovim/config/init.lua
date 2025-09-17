@@ -126,3 +126,4 @@ Conform.formatters_by_ft.lua = { "stylua" }
 Conform.formatters_by_ft.nix = { "nixfmt" }
 Conform.formatters_by_ft.sh = { "shfmt" }
 Conform.formatters_by_ft.typst = { "typstyle" }
+Conform.formatters_by_ft.cpp = { "clang-format" }
