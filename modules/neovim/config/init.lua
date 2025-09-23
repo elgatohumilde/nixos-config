@@ -33,7 +33,34 @@ vim.o.wrap = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-vim.cmd.colorscheme("jellybeans-nvim")
+require("kanagawa").setup({
+	transparent = true,
+	overrides = function(colors)
+		local theme = colors.theme
+
+		return {
+			FloatTitle = { bg = "none" },
+			NormalFloat = { bg = "none" },
+			FloatBorder = { bg = "none" },
+			PmenuThumb = { bg = theme.ui.bg_p2 },
+			PmenuSel = { fg = "none", bg = theme.ui.bg_p2 },
+			PmenuExtra = { fg = theme.syn.comment, bg = theme.ui.bg },
+			Pmenu = {
+				fg = theme.ui.shade0,
+				bg = theme.ui.bg,
+				blend = vim.o.pumblend,
+			},
+		}
+	end,
+	colors = {
+		theme = { all = { ui = {
+			bg = "none",
+			bg_gutter = "none",
+		} } },
+	},
+})
+vim.cmd.colorscheme("kanagawa")
+vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { link = "FloatBorder" })
 require("mini.icons").setup()
 
 require("mini.notify").setup()

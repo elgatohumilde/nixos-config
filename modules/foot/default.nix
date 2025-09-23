@@ -12,13 +12,13 @@
       };
 
       colors = {
-        foreground = "e4e4e4";
-        background = "141414";
+        foreground = "dcd7ba";
+        background = "0c0c0c";
 
-        selection-foreground = "f4f4ff";
-        selection-background = "453d41";
+        selection-foreground = "c8c093";
+        selection-background = "2d4f67";
 
-        regular0 = "07080d";
+        regular0 = "181818";
         regular1 = "f43841";
         regular2 = "73d936";
         regular3 = "ffdd33";

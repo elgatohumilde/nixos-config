@@ -16,7 +16,7 @@
       gitsigns-nvim
       nvim-jdtls
 
-      jellybeans-nvim
+      kanagawa-nvim
 
       mini-ai
       mini-icons
