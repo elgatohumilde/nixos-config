@@ -73,6 +73,7 @@
     cliphist
     equibop
     eza
+    fd
     gcc
     hyprpaper
     hyprpicker
@@ -84,6 +85,7 @@
     pavucontrol
     playerctl
     postman
+    ripgrep
     unzip
     wl-clipboard
     zoxide
