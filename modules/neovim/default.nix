@@ -24,6 +24,7 @@
       mini-pairs
       mini-surround
 
+      nvim-lspconfig
       nvim-treesitter.withAllGrammars
       typst-preview-nvim
 

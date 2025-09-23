@@ -72,15 +72,32 @@ require("nvim-treesitter.configs").setup({
 })
 
 vim.diagnostic.config({ virtual_text = true })
+
+local runtime_files = vim.api.nvim_get_runtime_file("", true)
+table.insert(runtime_files, "${3rd}/luv/library")
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			telemetry = { enable = false },
+			runtime = { version = "LuaJIT" },
+			workspace = {
+				checkThirdParty = false,
+				library = runtime_files,
+			},
+		},
+	},
+})
+
+vim.lsp.config("verible", {
+	cmd = { "verible-verilog-ls", "--rules_config_search" },
+})
+
 vim.lsp.enable({ "clangd", "lua_ls", "tinymist", "verible", "bashls", "nil_ls", "gopls" })
 
 require("blink-cmp").setup({
 	signature = { enabled = true },
 	completion = { documentation = { auto_show = true } },
 })
-
-local create_command = vim.api.nvim_create_user_command
-create_command("LspInfo", ":checkhealth vim.lsp", {})
 
 require("snacks").setup()
 vim.ui.select = Snacks.picker.select
