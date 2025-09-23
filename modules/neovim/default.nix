@@ -14,7 +14,6 @@
       blink-cmp
       conform-nvim
       gitsigns-nvim
-      nvim-jdtls
 
       kanagawa-nvim
 
@@ -26,7 +25,11 @@
 
       nvim-lspconfig
       nvim-treesitter.withAllGrammars
+
       typst-preview-nvim
+
+      elixir-tools-nvim
+      nvim-jdtls
 
       snacks-nvim
       tmux-nvim
@@ -45,6 +48,7 @@
 
       bash-language-server
       clang-tools
+      elixir-ls
       gopls
       jdt-language-server
       lua-language-server

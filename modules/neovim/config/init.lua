@@ -166,8 +166,15 @@ require("tmux").setup()
 
 local Conform = require("conform")
 Conform.setup({ format_on_save = { lsp_format = "fallback" } })
+Conform.formatters_by_ft.cpp = { "clang-format" }
+Conform.formatters_by_ft.elixir = { "mix" }
 Conform.formatters_by_ft.lua = { "stylua" }
 Conform.formatters_by_ft.nix = { "nixfmt" }
 Conform.formatters_by_ft.sh = { "shfmt" }
 Conform.formatters_by_ft.typst = { "typstyle" }
-Conform.formatters_by_ft.cpp = { "clang-format" }
+
+require("elixir").setup({
+	elixirls = {
+		cmd = { "elixir-ls" },
+	},
+})
