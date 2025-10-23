@@ -14,6 +14,7 @@
     "flakes"
   ];
 
+  services.zerotierone.enable = true;
   services.openssh.enable = true;
 
   networking.hostName = "nixos";
@@ -41,6 +42,7 @@
     pulse.enable = true;
   };
 
+  hardware.opentabletdriver.enable = true;
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
 
@@ -58,7 +60,6 @@
   environment.systemPackages = with pkgs; [
     git
     vim
-    wget
   ];
 
   system.stateVersion = "25.05";
