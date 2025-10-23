@@ -37,7 +37,7 @@
     extraConfig = ''
       label {
         color = rgb(cba6f7)
-          font_family = CommitMono Nerd Font
+          font_family = RobotoMono Nerd Font
           font_size = 64
           halign = center
           position = 0, 60
@@ -47,7 +47,7 @@
 
       label {
         color = rgb(cdd6f4)
-          font_family = CommitMono Nerd Font
+          font_family = RobotoMono Nerd Font
           font_size = 24
           halign = center
           position = 0, -16
@@ -57,7 +57,7 @@
 
       label {
         color = rgb(cdd6f4)
-          font_family = CommitMono Nerd Font Mono
+          font_family = RobotoMono Nerd Font Mono
           font_size = 30
           halign = center
           position = 0, 30

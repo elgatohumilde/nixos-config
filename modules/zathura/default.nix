@@ -5,7 +5,7 @@
 
     options = {
       database = "sqlite";
-      font = "CommitMono Nerd Font 14";
+      font = "RobotoMono Nerd Font 14";
       highlight-active-color = "rgba(255,255,255,0)";
       highlight-color = "rbga(255,255,255,0)";
       recolor = true;

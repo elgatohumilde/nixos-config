@@ -5,7 +5,7 @@
 
     settings = {
       default-timeout = 5000;
-      font = "CommitMono Nerd Font Mono 14pt";
+      font = "RobotoMono Nerd Font Mono 14pt";
       background-color = "#0F111A";
       border-color = "#93A1A1";
       text-color = "#EBDBB2";

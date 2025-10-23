@@ -42,7 +42,7 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      font-name = "CommitMono Nerd Font Propo 12";
+      font-name = "RobotoMono Nerd Font Propo 12";
       color-scheme = "prefer-dark";
     };
   };
@@ -68,26 +68,27 @@
   };
 
   home.packages = with pkgs; [
+    clonehero
+    osu-lazer-bin
+
     bibata-cursors
     brightnessctl
     cliphist
     equibop
     eza
     fd
-    gcc
     hyprpaper
     hyprpicker
     hyprshot
     lazygit
-    nerd-fonts.commit-mono
-    osu-lazer-bin
+    nerd-fonts.roboto-mono
     pamixer
     pavucontrol
     playerctl
-    postman
     ripgrep
     unzip
     wl-clipboard
+    zoom-us
     zoxide
   ];
 

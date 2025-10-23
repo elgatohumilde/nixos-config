@@ -8,15 +8,15 @@
 
       main = {
         shell = "${pkgs.fish}/bin/fish";
-        font = "CommitMono Nerd Font Mono:size=16";
+        font = "RobotoMono Nerd Font Mono:size=16";
       };
 
       colors = {
-        foreground = "dcd7ba";
-        background = "0c0c0c";
+        foreground = "e4e4e4";
+        background = "181818";
 
-        selection-foreground = "c8c093";
-        selection-background = "2d4f67";
+        selection-foreground = "f4f4ff";
+        selection-background = "453d41";
 
         regular0 = "181818";
         regular1 = "f43841";
