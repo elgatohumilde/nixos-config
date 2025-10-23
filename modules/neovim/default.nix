@@ -14,8 +14,10 @@
       blink-cmp
       conform-nvim
       gitsigns-nvim
+      oil-nvim
+      trouble-nvim
 
-      kanagawa-nvim
+      gruber-darker-nvim
 
       mini-ai
       mini-icons
@@ -30,6 +32,7 @@
 
       elixir-tools-nvim
       nvim-jdtls
+      nvim-metals
 
       snacks-nvim
       tmux-nvim
@@ -52,9 +55,12 @@
       gopls
       jdt-language-server
       lua-language-server
+      metals
       nil
       tinymist
+      typescript-language-server
       verible
+      zls
     ];
   };
 }

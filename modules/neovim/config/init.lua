@@ -10,7 +10,6 @@ vim.o.cursorline = true
 vim.o.encoding = "UTF-8"
 vim.o.expandtab = true
 vim.o.ignorecase = true
-vim.o.laststatus = 0
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 20
@@ -33,34 +32,7 @@ vim.o.wrap = false
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-require("kanagawa").setup({
-	transparent = true,
-	overrides = function(colors)
-		local theme = colors.theme
-
-		return {
-			FloatTitle = { bg = "none" },
-			NormalFloat = { bg = "none" },
-			FloatBorder = { bg = "none" },
-			PmenuThumb = { bg = theme.ui.bg_p2 },
-			PmenuSel = { fg = "none", bg = theme.ui.bg_p2 },
-			PmenuExtra = { fg = theme.syn.comment, bg = theme.ui.bg },
-			Pmenu = {
-				fg = theme.ui.shade0,
-				bg = theme.ui.bg,
-				blend = vim.o.pumblend,
-			},
-		}
-	end,
-	colors = {
-		theme = { all = { ui = {
-			bg = "none",
-			bg_gutter = "none",
-		} } },
-	},
-})
-vim.cmd.colorscheme("kanagawa")
-vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { link = "FloatBorder" })
+vim.cmd.colorscheme("gruber-darker")
 require("mini.icons").setup()
 
 require("mini.notify").setup()
@@ -92,6 +64,17 @@ create_autocmd("LspAttach", {
 		map("n", "gt", Snacks.picker.lsp_type_definitions)
 	end,
 })
+local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+create_autocmd("FileType", {
+	pattern = { "scala", "sbt" },
+	callback = function()
+		local metals_config = require("metals").bare_config()
+		metals_config.settings.useGlobalExecutable = true
+
+		require("metals").initialize_or_attach(metals_config)
+	end,
+	group = nvim_metals_group,
+})
 
 ---@diagnostic disable-next-line: missing-fields
 require("nvim-treesitter.configs").setup({
@@ -119,7 +102,7 @@ vim.lsp.config("verible", {
 	cmd = { "verible-verilog-ls", "--rules_config_search" },
 })
 
-vim.lsp.enable({ "clangd", "lua_ls", "tinymist", "verible", "bashls", "nil_ls", "gopls" })
+vim.lsp.enable({ "clangd", "lua_ls", "tinymist", "verible", "bashls", "nil_ls", "gopls", "ts_ls", "zls" })
 
 require("blink-cmp").setup({
 	signature = { enabled = true },
@@ -127,12 +110,13 @@ require("blink-cmp").setup({
 })
 
 require("snacks").setup()
+require("trouble").setup({ auto_preview = false, focus = true })
 vim.ui.select = Snacks.picker.select
 local map = vim.keymap.set
 
 map("n", "/", Snacks.picker.lines)
 map("n", "<A-z>", ":b#<CR>")
-map("n", "<C-s>", ":Ex<CR>")
+map("n", "<C-s>", ":Oil<CR>")
 map("n", "<Esc>", ":nohl<CR>")
 map("n", "<F1>", Snacks.picker.help)
 map("n", "<leader>-", ":sp<CR>")
@@ -140,6 +124,7 @@ map("n", "<leader>/", "/")
 map("n", "<leader><leader>", Snacks.picker.buffers)
 map("n", "<leader>Q", Snacks.bufdelete.other)
 map("n", "<leader>n", ":e ~/.dotfiles/modules/neovim<CR>")
+map("n", "<leader>oq", ":Trouble qflist toggle<CR>")
 map("n", "<leader>q", Snacks.bufdelete.delete)
 map("n", "<leader>sd", Snacks.picker.diagnostics)
 map("n", "<leader>sf", Snacks.picker.files)
@@ -160,6 +145,7 @@ map({ "n", "v" }, "gl", "$")
 
 require("gitsigns").setup()
 require("mini.ai").setup()
+require("oil").setup()
 require("mini.pairs").setup()
 require("mini.surround").setup()
 require("tmux").setup()
