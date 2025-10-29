@@ -80,6 +80,7 @@
     hyprpaper
     hyprpicker
     hyprshot
+    keepassxc
     lazygit
     nerd-fonts.roboto-mono
     pamixer
