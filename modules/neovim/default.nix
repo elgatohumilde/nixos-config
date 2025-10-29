@@ -31,6 +31,7 @@
       typst-preview-nvim
 
       elixir-tools-nvim
+      haskell-tools-nvim
       nvim-jdtls
       nvim-metals
 
@@ -44,6 +45,7 @@
       ripgrep
       wl-clipboard
 
+      haskellPackages.cabal-gild
       nixfmt-rfc-style
       shfmt
       stylua
@@ -53,6 +55,7 @@
       clang-tools
       elixir-ls
       gopls
+      haskell-language-server
       jdt-language-server
       lua-language-server
       metals
