@@ -13,12 +13,12 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./configuration.nix
+          ./system
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.joaquin = import ./home.nix;
+            home-manager.users.joaquin = import ./home;
           }
         ];
       };
