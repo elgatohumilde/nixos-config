@@ -4,10 +4,10 @@
   programs.tmux = {
     enable = true;
 
-    prefix = "M-x";
     baseIndex = 1;
     escapeTime = 0;
     mouse = true;
+    prefix = "M-x";
     terminal = "tmux-256color";
 
     extraConfig = ''

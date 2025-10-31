@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 let
@@ -10,7 +11,7 @@ let
 in
 {
 
-  imports = map (dir: ./${dir}) moduleDirs;
+  imports = map (dir: ./${dir}) moduleDirs ++ [ inputs.nixvim.homeModules.nixvim ];
 
   home.username = "joaquin";
   home.homeDirectory = "/home/${config.home.username}";

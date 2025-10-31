@@ -4,15 +4,15 @@
   programs.git = {
     enable = true;
 
-    userName = "Joaquin Lopez";
-    userEmail = "159632612+elgatohumilde@users.noreply.github.com";
-
     ignores = [
       "Session.vim"
       ".direnv/"
     ];
 
-    extraConfig = {
+    settings = {
+      user.name = "Joaquin Lopez";
+      user.email = "159632612+elgatohumilde@users.noreply.github.com";
+
       credential.helper = "store";
       init.defaultBranch = "main";
       pull.rebase = true;
