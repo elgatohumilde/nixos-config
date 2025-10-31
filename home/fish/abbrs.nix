@@ -1,11 +1,10 @@
 { ... }:
 {
 
-  programs.fish.shellAliases = {
-    sudo = "sudo ";
+  programs.fish.shellAbbrs = {
     cls = "clear";
     ls = "eza";
-    tree = "ls -T";
+    tree = "eza -T";
     open = "xdg-open";
     nv = "nvim";
     nvs = "nvim -S";

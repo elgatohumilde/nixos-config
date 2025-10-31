@@ -1,7 +1,7 @@
 { ... }:
 {
 
-  imports = [ ./aliases.nix ];
+  imports = [ ./abbrs.nix ];
 
   programs.fish = {
     enable = true;
