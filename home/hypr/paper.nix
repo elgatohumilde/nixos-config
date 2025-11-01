@@ -4,8 +4,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "~/.dotfiles/modules/hypr/Wallpapers/background.png" ];
-      wallpaper = [ ",~/.dotfiles/modules/hypr/Wallpapers/background.png" ];
+      preload = [ "~/.dotfiles/home/hypr/Wallpapers/background.png" ];
+      wallpaper = [ ",~/.dotfiles/home/hypr/Wallpapers/background.png" ];
     };
   };
 
